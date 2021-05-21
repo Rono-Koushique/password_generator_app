@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_label"
+        style="@style/Widget.header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/password"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password"
+        style="@style/Widget.Password_generator.Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sdkfjsldkfjalsdkf"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_label"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/copy_password_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_copy"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/password"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        tools:ignore="VectorDrawableCompat" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_grey"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/copy_password_icon"
+        app:layout_constraintBottom_toTopOf="@id/modifier_question"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/modifier_question"
+        style="@style/Widget.header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/modifier_question"
+        app:layout_constraintBottom_toTopOf="@+id/check_uppercase"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check_uppercase"
+        style="@style/Widget.checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_uppercase"
+        android:checked="true"
+        android:layoutDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@id/modifier_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check_lowercase"
+        style="@style/Widget.checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_lowercase"
+        android:checked="true"
+        android:layoutDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@id/check_uppercase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check_numbers"
+        style="@style/Widget.checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_numbers"
+        android:checked="true"
+        android:layoutDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@id/check_lowercase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check_symbols"
+        style="@style/Widget.checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_symbols"
+        android:checked="true"
+        android:layoutDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@id/check_numbers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_grey"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/check_symbols"
+        app:layout_constraintBottom_toTopOf="@id/password_length_text"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_length_text"
+        style="@style/Widget.header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_length_text"
+        app:layout_constraintBottom_toTopOf="@id/password_length_slider"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/password_length_text"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/password_length_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="4"
+        android:valueTo="20"
+        android:stepSize="1"
+        app:layout_constraintTop_toBottomOf="@id/password_length_text"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generate_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/generate_button"
+        app:layout_constraintTop_toBottomOf="@id/password_length_slider"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

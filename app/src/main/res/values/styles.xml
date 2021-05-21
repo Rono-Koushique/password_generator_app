@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <style name="Widget.Password_generator.Password" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+    </style>
+
+
+    <style name="Widget.checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+    </style>
+
+    <style name="Widget.header" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Password generator</string>
+    <string name="modifier_question">Password contains</string>
+    <string name="check_uppercase">Upper-case letters (A B C ...)</string>
+    <string name="check_lowercase">Lower-case letters (a b c ...)</string>
+    <string name="check_numbers">Numbers (1 2 3 ...)</string>
+    <string name="check_symbols">Symbols (@ # $ ...)</string>
+    <string name="password_length_text">Password length</string>
+    <string name="generate_button">Generate password</string>
+</resources>
